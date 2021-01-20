@@ -1,0 +1,67 @@
+{
+  "name": "myapp",
+  "version": "0.1.0",
+  "engines": {
+    "node": "12.16"
+  },
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lint-fix": "vue-cli-service lint --fix",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
+    "core-js": "^2.6.11",
+    "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
+    "serve-static": "^1.14.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.4.3",
+    "vue-session": "^1.0.0",
+    "vuelidate": "^0.7.5",
+    "vuetify": "^2.3.8",
+    "vuex": "^3.5.1",
+    "vuex-persistedstate": "^2.7.1"
+  },
+  "devDependencies": {
+    "@mdi/js": "^3.9.97",
+    "@vue/cli-plugin-babel": "^4.5.3",
+    "@vue/cli-plugin-eslint": "^4.5.3",
+    "@vue/cli-service": "^4.5.9",
+    "axios": "^0.19.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^7.3.1",
+    "vue-cli-plugin-vuetify": "^0.6.3",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.6.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

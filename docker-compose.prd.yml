@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile-prd
+    command: nginx -g 'daemon off;'
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    command: gunicorn mysite.wsgi --bind 0.0.0.0:8000 --log-file=/var/log/gunicorn.log
+    expose:
+      - 8000
+    ports:
+    - 8000:8000
+    env_file:
+      - ./backend/.env.prd
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.prd.db
+
+volumes:
+  postgres_data:
