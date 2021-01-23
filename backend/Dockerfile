@@ -21,7 +21,7 @@ RUN apt-get --assume-yes install python3.9
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1
 
 # install psycopg2 dependencies
-RUN apt-get --assume-yes install postgresql-12 python3.9-dev libpq-dev gcc python3-pip netcat
+RUN apt-get --assume-yes install postgresql-12 python3.9-dev libpq-dev gcc python3-pip netcat libxml2-dev libxslt-dev
 
 # install dependencies
 RUN python -m pip install --upgrade pip setuptools wheel
