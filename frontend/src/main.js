@@ -30,5 +30,6 @@ new Vue({
 // axios.defaults.baseURL = process.env.NODE_ENV !== 'production' ?
 //     'http://localhost:8000/' :
 //     'backend:8000/';
-axios.defaults.baseURL = `http://${location.hostname}:8000/`;
+// axios.defaults.baseURL = `http://${location.hostname}:8000/`;
+axios.defaults.baseURL = '/';
 // axios.defaults.headers['Authorization'] = `JWT ${store.state.token !== null ? store.state.token : ''}`;
