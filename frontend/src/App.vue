@@ -52,10 +52,11 @@ export default {
       else if (axios.defaults.headers['Authorization']) {
         delete axios.defaults.headers['Authorization'];
       }
-      // axios.defaults.baseURL = process.env.NODE_ENV !== 'production' ?
-      //     'http://localhost:8000/' :
-      //     'backend:8000/';
-      axios.defaults.baseURL = 'http://0.0.0.0:8000/';
+      // todo figure out why I need this in two spots (this one for refreshing)
+      axios.defaults.baseURL = process.env.NODE_ENV !== 'production' ?
+          `http://${location.hostname}:8000/` :
+          '/';
+      // axios.defaults.baseURL = 'http://0.0.0.0:8000/';
     },
   },
 };
